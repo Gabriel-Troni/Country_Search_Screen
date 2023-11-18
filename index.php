@@ -1,5 +1,5 @@
 <?php require("db_connection.php") ?>
-<?php require_once("sql_select.php") ?>
+<?php require("sql_select.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,15 +43,6 @@
                 </div>
             </div>
         </form>
-        <?php
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-                $pais = $_POST["pais"];
-                $capital = $_POST["capital"];
-                $campoOrdenacao = $_POST["campoOrdenacao"];
-                $ordem = $_POST["ordem"];
-                require("sql_select.php");
-            }
-        ?>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
