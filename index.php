@@ -1,4 +1,5 @@
 <?php require("db_connection.php") ?>
+<?php require_once("sql_select.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +13,19 @@
 <body>
     <div class="container">
         <h1>Lista de Países</h1>
-        <form action="search.php" method="post" class="mb-3">
+        <form action="index.php" method="POST" class="mb-3">
             <div class="row">
                 <div class="col-md-4 mb-2">
-                    <input type="text" class="form-control" placeholder="Buscar País" name="pais">
+                    <input type="text" class="form-control" placeholder="Buscar País" name="pais" value="">
                 </div>
                 <div class="col-md-4 mb-2">
-                    <input type="text" class="form-control" placeholder="Buscar Capital" name="capital">
+                    <input type="text" class="form-control" placeholder="Buscar Capital" name="capital" value="">
                 </div>
             </div>
             <p>Ordenar por:</p>
             <div class="row">
                 <div class="col-md-2 mb-2">
-                    <select class="form-control" name="ordenar">
+                    <select class="form-control" name="campoOrdenacao">
                         <option value="pais">País</option>
                         <option value="capital">Capital</option>
                         <option value="populacao">População</option>
@@ -32,7 +33,7 @@
                     </select>
                 </div>
                 <div class="col-md-2 mb-2">
-                    <select class="form-control" name="">
+                    <select class="form-control" name="ordem">
                         <option value="">Crescente</option>
                         <option value="desc">Decrescente</option>
                     </select>
@@ -42,6 +43,15 @@
                 </div>
             </div>
         </form>
+        <?php
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+                $pais = $_POST["pais"];
+                $capital = $_POST["capital"];
+                $campoOrdenacao = $_POST["campoOrdenacao"];
+                $ordem = $_POST["ordem"];
+                require("sql_select.php");
+            }
+        ?>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -52,26 +62,16 @@
                 </tr>
             </thead>
             <tbody>
-                <?php 
-                    $sql = "SELECT  Country.name AS pais, 
-                                    City.name AS capital,
-                                    Country.population AS populacao,
-                                    CountryLanguage.language  AS lingua
-                                    
-                            FROM    Country
-                                    INNER JOIN City 
-                                        ON Country.capital = City.ID
-                                    INNER JOIN CountryLanguage 
-                                        ON Country.code = CountryLanguage.CountryCode";
+                <?php
                     $result = mysqli_query($conn, $sql);
                     if(mysqli_num_rows($result) > 0){
-                        while($row = mysqli_fetch_assoc($result)){
-                            echo "<tr>
-                                    <th>" . $row['pais'] . "</th>
-                                    <th>" . $row['capital'] . "</th>
-                                    <th>" . $row['populacao'] . "</th>
-                                    <th>" . $row['lingua'] . "</th>
-                                </tr>";
+                         while($row = mysqli_fetch_assoc($result)){
+                            echo    "<tr>
+                                        <th>" . $row['pais'] . "</th>
+                                        <th>" . $row['capital'] . "</th>
+                                        <th>" . $row['populacao'] . "</th>
+                                        <th>" . $row['lingua'] . "</th>
+                                    </tr>";
                         };
                     };
                 ?>
