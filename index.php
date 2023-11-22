@@ -42,7 +42,7 @@
                     </select>
                 </div>
                 <div class="col-md-2 mb-2">
-                    <input type="text" class="form-control" placeholder="número de buscas" name="qtde" value="">
+                    <input type="text" class="form-control" placeholder="Número de buscas" name="qtde" value="">
                 </div>
                 <div class="col-md-2 mb-2">
                     <input type="submit" class="btn btn-primary" value="Buscar">
