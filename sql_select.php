@@ -1,6 +1,6 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "GET"){
-$sql =  "SELECT Country.name AS pais, 
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $sql = "SELECT Country.name AS pais, 
                 City.name AS capital,
                 Country.population AS populacao,
                 CountryLanguage.language  AS lingua                 
@@ -8,11 +8,11 @@ $sql =  "SELECT Country.name AS pais,
                 INNER JOIN City 
                     ON Country.capital = City.ID
                 INNER JOIN CountryLanguage 
-                    ON Country.code = CountryLanguage.CountryCode";
-}
-else if($_SERVER["REQUEST_METHOD"] == "POST"){
+                    ON Country.code = CountryLanguage.CountryCode LIMIT 100";
+} else if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require("check_form.php");
-    $sql =  "SELECT Country.name AS pais, 
+    $limitClause = ($qtde != "" && $qtde > 0) ? "LIMIT $qtde" : "";
+    $sql = "SELECT Country.name AS pais, 
                     City.name AS capital,
                     Country.population AS populacao,
                     CountryLanguage.language  AS lingua                 
@@ -23,6 +23,6 @@ else if($_SERVER["REQUEST_METHOD"] == "POST"){
                         ON Country.code = CountryLanguage.CountryCode
             WHERE   Country.name LIKE '%" . $pais . "%'
                     AND City.name LIKE '%" . $capital . "%'
-            ORDER BY "  . $campoOrdenacao . " " . $ordem;
+            ORDER BY " . $campoOrdenacao . " " . $ordem . " $limitClause";
 }
 ?>
