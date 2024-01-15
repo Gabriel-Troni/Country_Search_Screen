@@ -1,12 +1,26 @@
-# Country_Search_Screen
+# Country_Search
+The project connects to a database containing information about countries, such as capital, population, and official languages. A website was created to allow users to make SQL queries in a user-friendly interface, using various filter conditions. This project was undertaken to fulfill the requirements of our Web Development course, which is a part of our System Analysis and Development degree.
 
-Crie uma única página que lista países e suas respectivas populações, bem como, nome da capital e línguas faladas no país.
-A página deve permitir as seguintes funcionalidades:
- - Apresentar a listagem com dados paginados. Ou seja, exibir apenas um número máximo de itens por página (por exemplo, listar apenas os 100 primeiros). Esse valor pode ser alterado pelo usuário;
- - Ordenar a lista por qualquer um dos campos;
- - Realizar uma busca por nome de país ou capital;
+The database used can be found at: https://gist.githubusercontent.com/jaconza/1309302/raw/66caa0146c22b0bca913738b8be8ef35aea83a39/word_country_data.sql
 
-Todas as funcionalidades deve ser implementadas em PHP.
+## Technologies Used
+- T-SQL
+- PHP
+- Bootstrap
+- CSS
+- HTML
 
-O banco foi populado com o seguinte dump:
-https://gist.githubusercontent.com/jaconza/1309302/raw/66caa0146c22b0bca913738b8be8ef35aea83a39/word_country_data.sql
+## Features
+- Search for country information in a user-friendly interface
+- Filter information by country and capital
+- Order results by any field in ascending or descending order
+- Define the limit of search results as per user preferences
+
+## Screenshots
+<div style="display: flex;">
+  <img src="" alt="first page" style="width: 100%">
+  <img src="" alt="second page" style="width: 100%">
+</div>
+
+## Acknowledgements
+Special thanks to Professor Alexander Kutzke for introducing us to this project and providing the necessary guidance.
