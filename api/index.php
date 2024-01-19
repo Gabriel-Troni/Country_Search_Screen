@@ -1,4 +1,4 @@
-<?php require_once("db_connection.php") ?>
+<?php require("db_connection.php") ?>
 <?php //require("sql_select.php") ?>
 <!DOCTYPE html>
 <html lang="en">
