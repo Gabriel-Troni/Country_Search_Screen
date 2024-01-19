@@ -1,5 +1,5 @@
 <?php require("db_connection.php") ?>
-<?php require("sql_select.php") ?>
+<?php //require("sql_select.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +58,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
+                <?php/*
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -71,7 +71,7 @@
                     }
                     ;
                 }
-                ;
+                ;*/
                 ?>
             </tbody>
         </table>
@@ -81,4 +81,4 @@
 </body>
 
 </html>
-<?php mysqli_close($conn) ?>
+<?php //mysqli_close($conn) ?>
