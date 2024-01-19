@@ -4,7 +4,7 @@
   $db_password = "example";
   $dbname = "world";
 
-  $conn = mysqli_connect($servername, $username, $db_password);
+  $conn = mysqli_connect($servername, $username, $db_password, $dbname);
   if(!$conn){
     die("Erro na conexão: " . mysqli_connection_error());
   }
