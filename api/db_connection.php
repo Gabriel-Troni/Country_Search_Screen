@@ -1,8 +1,8 @@
 <?php 
-  $servername   = $_ENV["PLANETSCALE_DB_HOST"]
-  $username     = $_ENV["PLANETSCALE_DB_USERNAME"]
-  $db_password  = $_ENV["PLANETSCALE_DB_PASSWORD"]
-  $dbname       = $_ENV["PLANETSCALE_DB"]
+  $servername   = $_ENV["PLANETSCALE_DB_HOST"];
+  $username     = $_ENV["PLANETSCALE_DB_USERNAME"];
+  $db_password  = $_ENV["PLANETSCALE_DB_PASSWORD"];
+  $dbname       = $_ENV["PLANETSCALE_DB"];
 
   $conn = mysqli_connect($servername, $username, $db_password);
   if(!$conn){
