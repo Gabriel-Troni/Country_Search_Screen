@@ -1,5 +1,5 @@
 <?php require("db_connection.php") 
-  die('até aqui deu certo');
+  echo ('até aqui deu certo');
 ?>
 <?php //require("sql_select.php") ?>
 <!DOCTYPE html>
