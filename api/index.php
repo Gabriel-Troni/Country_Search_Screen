@@ -1,4 +1,6 @@
-<?php require("db_connection.php") ?>
+<?php require("db_connection.php") 
+  die('até aqui deu certo');
+?>
 <?php //require("sql_select.php") ?>
 <!DOCTYPE html>
 <html lang="en">
