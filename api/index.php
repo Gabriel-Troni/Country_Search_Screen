@@ -1,4 +1,8 @@
-<?php require("db_connection.php") 
+<?php //require("db_connection.php") 
+  $servername = "200.236.3.126";
+  $username = "root";
+  $db_password = "example";
+  $dbname = "world";
   echo "<h1>até aqui deu certo</h1>";
 ?>
 <?php //require("sql_select.php") ?>
