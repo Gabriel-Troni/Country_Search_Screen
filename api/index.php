@@ -3,6 +3,7 @@
   $username = "root";
   $db_password = "example";
   $dbname = "world";
+  $conn = mysqli_connect($servername, $username, $db_password, $dbname);
   echo "<h1>até aqui deu certo</h1>";
 ?>
 <?php //require("sql_select.php") ?>
@@ -64,7 +65,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php/*
+                <?php /*
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
