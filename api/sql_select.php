@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 INNER JOIN City 
                     ON Country.capital = City.ID
                 INNER JOIN CountryLanguage 
-                    ON Country.code = CountryLanguage.CountryCode LIMIT 1";
+                    ON Country.code = CountryLanguage.CountryCode LIMIT 50";
 } else if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require("check_form.php");
     $limite = ($qtde != "" && $qtde > 0) ? "LIMIT $qtde" : "";
