@@ -88,5 +88,5 @@
 
 </html>
 <?php //mysqli_close($conn)
-$conn = mysqli_connect($servername, $username, $db_password, $dbname);
+//$conn = mysqli_connect($servername, $username, $db_password, $dbname);
 ?>
