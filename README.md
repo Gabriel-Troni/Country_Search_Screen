@@ -4,7 +4,7 @@ The project connects to a database containing information about countries, such 
 The database used can be found [here](https://gist.githubusercontent.com/jaconza/1309302/raw/66caa0146c22b0bca913738b8be8ef35aea83a39/word_country_data.sql).
 
 ## Technologies Used
-- T-SQL
+- MySQL
 - PHP
 - Bootstrap
 - CSS
