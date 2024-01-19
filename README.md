@@ -18,8 +18,8 @@ The database used can be found [here](https://gist.githubusercontent.com/jaconza
 
 ## Screenshots
 <div style="display: flex;">
-  <img src="" alt="first page" style="width: 100%">
-  <img src="" alt="second page" style="width: 100%">
+  <img src="/img/screen1.PNG" alt="first example" style="width: 100%">
+  <img src="/img/screen2.PNG" alt="second example" style="width: 100%">
 </div>
 
 ## Acknowledgements
